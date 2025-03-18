@@ -1,4 +1,7 @@
-# 欢迎使用  上海海事大学 LaTeX 学位论文模板(SHMTUThesis - LaTeX )
+# 欢迎使用  上海海事大学 LaTeX 学位论文模板(SHMTUThesis - LaTeX ) - 针对linux特化版
+
+
+以下内容来自原模版，linux部分有修改，保证可以跑通：
 
 > 本项目是上海海事大学学位论文（<font color="red">非官方</font>）LaTeX 模板文档。
 >
@@ -42,8 +45,16 @@
 
 #### 命令行运行
 
-1. 首先，安装``latexmk``和``biber``，``sudo apt-get install latexmk biber``；
-2. 然后，在``SHMTUThesis``目录下运行``./compile.sh run``，等待论文生成即可。
+1. 由于linux自带字体没有隶书，所以需要安装字体到linux ``cp ./fonts/*.TTF /usr/local/share/fonts ``
+2. 环境安装
+``` bash
+sudo apt-get update
+sudo apt-get install latexmk biber texlive-xetex texlive-lang-chinese fonts-xits texlive-fonts-extra texlive-science -y
+fc-cache -fv
+xelatex main.tex # 这一步是测试环境
+```
+3. 然后，在``SHMTUThesis``目录下运行``./compile.sh run``，等待论文生成即可。
+
 
 #### VSCode编辑器
 
@@ -72,6 +83,10 @@
   ```
 5. 修改完配置后，在编辑器内打开``main.tex``；
 6. 点击左边的``TEX``按钮，选择``Build LaTex Project``，再点击``Recipe: xe->bib->xe->xe``即可。
+
+
+
+
 
 ### Windows用户
 
