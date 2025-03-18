@@ -7,9 +7,9 @@
 宏包 \pkg{siunitx} \footnote{\url{http://tug.ctan.org/macros/latex/exptl/siunitx/siunitx.pdf}}提供了更好的数字和单位支持，具体请查看相关文档：
 \begin{itemize}
 	\item \num{12345,67890}
-	\item \num{1+-2i}
+	\item \num[parse-numbers=false]{1-2i}
 	\item \num{.3e45}
-	\item \num{1.654 x 2.34 x 3.430}
+	\item \num[parse-numbers=false]{1.654 x 2.34 x 3.430}
 	\item \si{kg.m.s^{-1}}
 	\item \si{\kilogram\metre\per\second}
 	\item \si[per-mode=symbol]{\kilogram\metre\per\second}
